@@ -1,0 +1,22 @@
+@use '../index.scss' as *;
+
+.container {
+  .title {
+    @include bold(48px, Roboto);
+  }
+  .textDescription {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    @include regular(18px, Roboto);
+  }
+  .button {
+    @include bold(18px, Roboto);
+    border: 2px solid $purple;
+    border-radius: 50px;
+    background-color: $darkBlue;
+    color: $white;
+    padding: 15px 0;
+    text-align: center;
+  }
+}

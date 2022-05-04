@@ -1,0 +1,45 @@
+@use '../index.scss' as *;
+
+.container {
+  background-color: $purple;
+  border-radius: 10px;
+
+  .innerContainer {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputBox {
+    width: 80%;
+    height: 30px;
+    margin: 10px 0;
+    background-color: $violet;
+    border-radius: 4px;
+    color: $white;
+    box-shadow: none;
+    @include regular(18px, Roboto);
+  }
+
+  .inputBox::placeholder {
+    color: $white;
+  }
+
+  .line {
+    margin: 10px;
+    border: 1px solid $white;
+    width: 100%;
+  }
+  .button {
+    @include bold(18px, Roboto);
+    border: 2px solid $white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: $white;
+    padding: 15px 0;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+  }
+}

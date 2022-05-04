@@ -1,0 +1,77 @@
+$black: #2c2c2c;
+$gray: #5c5c5c;
+$white: #f4f4f4;
+$violet: #8381f8;
+$darkPurple: #bb3cff;
+$purple: #29284e;
+$darkBlue: #101b59;
+$pink: #fd75c9;
+$red: #d10b00;
+$salmon: #ff4b67;
+$orange: #f06500;
+$lightOrange: #ffa78c;
+$lighterOrange: #ffdbd0;
+
+@mixin media($size) {
+  @media screen and (max-width: $size) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin mobile {
+  @include media(425px) {
+    @content;
+  }
+}
+
+@mixin table {
+  @include media(800px) {
+    @content;
+  }
+}
+
+@mixin font(
+  $font-size: 22px,
+  $font-weight: 400,
+  $font-family,
+  $mobile-font-size
+) {
+  font: $font-weight $font-size $font-family;
+  @if $mobile-font-size {
+    @include mobile {
+      font-size: $mobile-font-size;
+    }
+  }
+}
+
+@mixin regular($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 400, $font-family, $mobile-font-size);
+}
+
+@mixin medium($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 500, $font-family, $mobile-font-size);
+}
+
+@mixin semiBold($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 600, $font-family, $mobile-font-size);
+}
+
+@mixin bold($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 700, $font-family, $mobile-font-size);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

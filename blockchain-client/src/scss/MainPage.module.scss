@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 5%;
+  .connectWallet {
+    flex: 1 1 300px;
+    padding-right: 5%;
+  }
+  .sendSection {
+    margin-top: 70px;
+    width: 400px;
+    .inputBoxes {
+      margin-top: 10px;
+    }
+  }
+}
