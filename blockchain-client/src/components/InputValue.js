@@ -15,8 +15,25 @@ const Input = ({ placeholder, name, type, value, handleChange }) => {
   )
 }
 
-const InputValue = () => {
+const InputValue = ({
+  formData,
+  setFormData,
+  handleChange,
+  sendTransaction
+}) => {
   const [sendRequest, setSendRequest] = useState(false)
+
+  const handleSubmit = e => {
+    //setSendRequest(true)
+    const { addressTo, amount, keyword, message } = formData
+    e.preventDefault()
+    console.log(formData)
+    if (!addressTo || !amount || !keyword || !message) {
+      return
+    }
+
+    sendTransaction()
+  }
 
   return (
     <div className={styles.container}>
@@ -25,36 +42,31 @@ const InputValue = () => {
           placeholder="Address To"
           name="addressTo"
           type="text"
-          handleChange={() => {}}
+          handleChange={handleChange}
         />
         <Input
           placeholder="Amount (ETH)"
           name="amount"
-          type="text"
-          handleChange={() => {}}
+          type="number"
+          handleChange={handleChange}
         />
         <Input
           placeholder="Keyword (GIF)"
           name="keyword"
           type="text"
-          handleChange={() => {}}
+          handleChange={handleChange}
         />
         <Input
           placeholder="Enter Message"
-          name="enterMessage"
+          name="message"
           type="text"
-          handleChange={() => {}}
+          handleChange={handleChange}
         />
         <div className={styles.line} />
         {sendRequest ? (
           <Spinner />
         ) : (
-          <button
-            className={styles.button}
-            onClick={() => {
-              setSendRequest(true)
-            }}
-          >
+          <button className={styles.button} onClick={handleSubmit}>
             Send Now
           </button>
         )}
