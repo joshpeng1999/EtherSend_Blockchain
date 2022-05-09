@@ -19,7 +19,7 @@
     border-radius: 4px;
     color: $white;
     box-shadow: none;
-    @include regular(18px, Roboto);
+    @include regular(18px, Roboto, 16px);
   }
 
   .inputBox::placeholder {
@@ -32,7 +32,7 @@
     width: 100%;
   }
   .button {
-    @include bold(18px, Roboto);
+    @include bold(18px, Roboto, 16px);
     border: 2px solid $white;
     border-radius: 50px;
     background-color: transparent;

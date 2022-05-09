@@ -1,0 +1,24 @@
+@use '../index.scss' as *;
+
+.container {
+  .title {
+    text-align: center;
+    color: $white;
+    @include regular(48px, Roboto, 26px);
+  }
+  .cards {
+    margin: 0 10%;
+    display: grid;
+    grid-row-gap: 31px;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media screen and (max-width: 800px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

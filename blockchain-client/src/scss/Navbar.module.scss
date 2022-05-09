@@ -1,0 +1,40 @@
+@use '../index.scss' as *;
+
+.container {
+  height: 140px;
+  background-color: $cyan;
+  .titleGroup {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+    color: $black;
+    padding-left: 5%;
+    .ethLogo {
+      width: 50px;
+    }
+    .title {
+      @include regular(44px, Roboto, 26px);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: 100px;
+    .titleGroup {
+      width: 200px;
+      padding: 25px 0;
+      color: white;
+      padding-left: 5%;
+      .ethLogo {
+        width: 25px;
+      }
+      .title {
+        margin: 0;
+        @include regular(44px, Roboto, 20px);
+      }
+    }
+  }
+}

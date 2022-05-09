@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styles from '../scss/InputValue.module.scss'
 import Spinner from './Spinner'
 
@@ -19,10 +18,9 @@ const InputValue = ({
   formData,
   setFormData,
   handleChange,
-  sendTransaction
+  sendTransaction,
+  isLoading
 }) => {
-  const [sendRequest, setSendRequest] = useState(false)
-
   const handleSubmit = e => {
     //setSendRequest(true)
     const { addressTo, amount, keyword, message } = formData
@@ -63,7 +61,7 @@ const InputValue = ({
           handleChange={handleChange}
         />
         <div className={styles.line} />
-        {sendRequest ? (
+        {isLoading ? (
           <Spinner />
         ) : (
           <button className={styles.button} onClick={handleSubmit}>

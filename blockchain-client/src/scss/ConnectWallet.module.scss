@@ -1,17 +1,18 @@
 @use '../index.scss' as *;
 
 .container {
+  color: $white;
   .title {
-    @include bold(48px, Roboto);
+    @include bold(48px, Roboto, 32px);
   }
   .textDescription {
     margin: 0;
     margin-top: 20px;
     margin-bottom: 10px;
-    @include regular(18px, Roboto);
+    @include regular(18px, Roboto, 16px);
   }
   .button {
-    @include bold(18px, Roboto);
+    @include bold(18px, Roboto, 16px);
     border: 2px solid $purple;
     border-radius: 50px;
     background-color: $darkBlue;

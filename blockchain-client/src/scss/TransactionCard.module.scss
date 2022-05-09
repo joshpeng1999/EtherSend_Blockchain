@@ -1,0 +1,42 @@
+@use '../index.scss' as *;
+
+.container {
+  background-color: $lightBlue;
+  width: 300px;
+  .hyperlink {
+    color: $darkBlack;
+  }
+  .timeStamp {
+    @include regular(18px, Roboto, 16px);
+    width: 200px;
+    padding: 10px 0;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 3px $black;
+    border-radius: 90px;
+    background-color: $lightOrange;
+    color: $black;
+    transform: translateY(-15px);
+  }
+  .textGroup {
+    @include regular(18px, Roboto, 16px);
+    padding: 0 5%;
+
+    .text {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .gifs {
+    width: 80%;
+    margin: 0 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 260px;
+  }
+}

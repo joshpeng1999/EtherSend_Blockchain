@@ -1,16 +1,14 @@
 $black: #2c2c2c;
+$darkBlack: #000000;
 $gray: #5c5c5c;
 $white: #f4f4f4;
-$violet: #8381f8;
-$darkPurple: #bb3cff;
-$purple: #29284e;
+$violet: #36385b;
+$lightBlue: #82a9f9;
+$purple: #1c0032;
 $darkBlue: #101b59;
-$pink: #fd75c9;
-$red: #d10b00;
-$salmon: #ff4b67;
-$orange: #f06500;
+$blue: #2b2fb0;
+$cyan: #a4f5fc;
 $lightOrange: #ffa78c;
-$lighterOrange: #ffdbd0;
 
 @mixin media($size) {
   @media screen and (max-width: $size) {
@@ -21,7 +19,7 @@ $lighterOrange: #ffdbd0;
 }
 
 @mixin mobile {
-  @include media(425px) {
+  @include media(600px) {
     @content;
   }
 }

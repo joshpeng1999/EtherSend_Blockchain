@@ -23,13 +23,13 @@
     width: 10%;
   }
   .title {
-    @include bold(30px, Roboto);
+    @include bold(30px, Roboto, 26px);
     color: $white;
     margin: 0;
     margin-top: 10px;
   }
   .address {
-    @include bold(18px, Roboto);
+    @include bold(18px, Roboto, 16px);
     color: $white;
     margin-top: 20px;
   }

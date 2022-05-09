@@ -1,17 +1,44 @@
+@use '../index.scss' as *;
+
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 0 5%;
-  .connectWallet {
-    flex: 1 1 300px;
-    padding-right: 5%;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #002459,
+    #002e7c,
+    #1737a0,
+    #3a3dc2
+  );
+  .innerContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    .connectWallet {
+      flex: 1 1 300px;
+      max-width: 600px;
+      padding-right: 5%;
+    }
+    .sendSection {
+      margin-top: 70px;
+      width: 450px;
+      .inputBoxes {
+        margin-top: 10px;
+      }
+    }
   }
-  .sendSection {
-    margin-top: 70px;
-    width: 400px;
-    .inputBoxes {
-      margin-top: 10px;
+
+  .prevTransactions {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .innerContainer {
+      .sendSection {
+        margin-top: 30px;
+      }
     }
   }
 }
