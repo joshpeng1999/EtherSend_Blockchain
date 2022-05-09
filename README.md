@@ -1,2 +1,10 @@
 # BlockChainSenderReceiver
- A project to understand and implement blockchain technology
+
+## Project Description
+
+This is a code repository for a simple web application that integrates Web 3.0 technologies and the blockchain. In this app, users can first connect their Metamask accounts and send fake Ethereum over the Ropsten Test Network. The application will then mimic the process of sending real cryptocurrency from one wallet address to another and also retrieve all transactions from the blockchain. 
+
+Because this application is not currently deployed and valid API keys are required to run this application locally, some images of the application of the User Interface is provided below:
+
+
+
