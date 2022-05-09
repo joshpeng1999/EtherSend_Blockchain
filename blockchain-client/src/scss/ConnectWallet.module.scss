@@ -13,11 +13,12 @@
   }
   .button {
     @include bold(18px, Roboto, 16px);
-    border: 2px solid $purple;
+    border: 2px solid $white;
     border-radius: 50px;
     background-color: $darkBlue;
     color: $white;
     padding: 15px 0;
     text-align: center;
+    cursor: pointer;
   }
 }

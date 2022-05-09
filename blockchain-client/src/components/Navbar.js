@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.titleGroup}>
         <img className={styles.ethLogo} src={ethLogoMain} alt={ethLogoMain} />
-        <p className={styles.title}>Blockchain App</p>
+        <p className={styles.title}>EtherSend</p>
       </div>
     </div>
   )

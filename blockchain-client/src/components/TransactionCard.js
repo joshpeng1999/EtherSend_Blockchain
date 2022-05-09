@@ -36,7 +36,6 @@ const TransactionCard = ({
         >
           <p className={styles.text}>To: {shortenAddress(addressTo)}</p>
         </a>
-        <p className={styles.text}>Amount: {amount}</p>
         {message && <p className={styles.text}>Amount: {amount} ETH</p>}
       </div>
       <img src={gifUrl || url} alt="gif" className={styles.gifs}></img>
