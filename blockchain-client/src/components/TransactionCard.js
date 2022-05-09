@@ -18,7 +18,6 @@ const TransactionCard = ({
   return (
     <div className={styles.container}>
       <div className={styles.timeStamp}>{timeStamp}</div>
-
       <div className={styles.textGroup}>
         <a
           href={`https://ropsten.etherscan.io/address/${addressFrom}`}
@@ -36,7 +35,8 @@ const TransactionCard = ({
         >
           <p className={styles.text}>To: {shortenAddress(addressTo)}</p>
         </a>
-        {message && <p className={styles.text}>Amount: {amount} ETH</p>}
+        <p className={styles.text}>Amount: {amount} ETH</p>
+        {message && <p className={styles.text}>Message: {message}</p>}
       </div>
       <img src={gifUrl || url} alt="gif" className={styles.gifs}></img>
     </div>

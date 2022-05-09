@@ -57,7 +57,6 @@ export const TransactionProvider = ({ children }) => {
         amount: parseInt(transaction.amount._hex) / 10 ** 18 // convert hew to eth
       }))
       setTransactions(structuredTransactions)
-      console.log(structuredTransactions)
     } catch (error) {
       console.log(error)
       throw new Error('No ethereum object.')
