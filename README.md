@@ -13,5 +13,5 @@ Because this application is not currently deployed and valid API keys are requir
 ## Tech Stack
 
 * Front-end: React · JavaScript · Sass
-* Back-end: Solidity · Hardhat
+* Back-end: Hardhat · Solidity
 
