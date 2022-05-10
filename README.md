@@ -1,4 +1,4 @@
-# BlockChainSenderReceiver
+# Web 3.0 Project: Sending Ethereum over the blockchain
 
 ## Project Description
 
@@ -6,5 +6,12 @@ This is a code repository for a simple web application that integrates Web 3.0 t
 
 Because this application is not currently deployed and valid API keys are required to run this application locally, some images of the application of the User Interface is provided below:
 
+*Screenshots:*
+![image1](https://github.com/joshpeng1999/BlockChainSenderReceiver/blob/main/blockchain-client/src/screenshots/img1.png)
+![image2](https://github.com/joshpeng1999/BlockChainSenderReceiver/blob/main/blockchain-client/src/screenshots/img2.png)
 
+## Tech Stack
+
+* Front-end: React · JavaScript · Sass
+* Back-end: Solidity · Hardhat
 
